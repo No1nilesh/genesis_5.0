@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Select Theme
+    style 
+      include ./index.css
+      
+  body 
+
+
+  h1 Mes College of Arts and Commerce
+  form(action='/api/select-theme', method='post')
+    h2.selectTheme Select Theme
+    label(for='email') Email:
+    input#email(type='email', name='email',placeholder='Enter Your Email' required)
+
+    br
+
+    label(for='college') College Name:
+    - let options = ['mes collge', 'don bosco', 'tatamotors', "messnoviud", "apple" , "lfnnnon" , "naonooh" , "a;slfnub"]
+
+    select#college(name='college' required)
+      <option value="" disabled selected>Select your College</option>
+      each option in options
+        - let disabled = shouldBeDisabled(option)
+        option(value=option, disabled=disabled)= option
+
+    label(for='theme') Theme:
+    - let themes = ["Wednesday", "Squid Game", 'Vikings', "Peaky Blinders", "Qala", 'Emily in Paris', 'The School of Good & Evil', 'Lucifer', 'Titans', 'Naruto', 'Demon Slayer', 'Justice league', 'Chainsaw man', 'Death note', 'Tokyo Revengers', 'Jujutsu kaisen']
+
+    select#theme(name='theme' required)
+      <option value="" disabled selected>Select your Theme</option>
+      each theme in themes
+        - let disabled = themeshouldBeDisabled(theme)
+        option(value=theme, disabled=disabled)= theme
+
+
+    br
+
+    button#themeBtn(type='submit') Submit
+    
+      -function shouldBeDisabled(option) {  const disabledOptions = colleges;  return disabledOptions.includes(option) }
+      -function themeshouldBeDisabled(theme) {  const disabledOptions = Ethemes;  return disabledOptions.includes(theme) }
+        
+        script(src="modal.js") 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

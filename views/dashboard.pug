@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        style 
+          include ./index.css
+    body 
+    h1 Dashboard
+    table#customers.table-striped
+      tr
+        th Email
+        th College
+        th Theme
+
+      each n in event
+        tr
+          td= n.email
+          td= n.college
+          td= n.theme
+        
+                        
