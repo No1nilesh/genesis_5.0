@@ -22,9 +22,17 @@ router.post(
     body("theme").isLength({ min: 3 }),
   ],
   async (req, res) => {
-    const { email, college, theme } = req.body;
 
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).render('error')
+    }
+
+
+    
     try {
+      const { email, college, theme } = req.body;
       success = false;
       themeDb = await Event.findOne({ theme: theme });
       collegeDb = await Event.findOne({ college: college });
