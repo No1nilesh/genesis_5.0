@@ -12,16 +12,16 @@ html(lang="en")
 
 
   h1 Mes College of Arts and Commerce
-  form(action='/api/register', method='post')
+  form(action='/api/register', method='post', autocomplete="off")
     h2.selectTheme Registration
     .instructions ⚠️ *If Not participating in any particular event Please select through checkbox infront of event names!
     label(for='email') Email:
-    input#email(type='email', name='email',placeholder='Enter Your Email' required)
+    input#email(type='email', name='email',placeholder='Enter Your Email',autocomplete="off", required)
 
     
 
     label(for='college') College Name:
-    - let options = ['mes collge', 'don bosco', 'tatamotors', "messnoviud", "apple" , "lfnnnon" , "naonooh" , "a;slfnub"]
+    - let options = ['GEC', 'GCA', 'Goa University', "Don Bosco College", "Dempe" , "Damodar College" , "St Xavier" , "Dempo", "Vidhya Probodhini College", "Ft Agnel", "PCC", "Rajeswar Institute of Engineering & Infotech", "GVM - Shri Govind - Ponda", "Shridora Caculo College - Mapusa (Saraswat)", "Parvatibai Chowgule", "Govt College of - Khandola", "Sateri Pasini Edu Society - Dharbandora", "Dhayan Prakash Mondal College", "Vm Salgaokar of Law"]
 
     select#college(name='college' required)
       <option value="" disabled selected>Select your College</option>
@@ -29,10 +29,14 @@ html(lang="en")
         - let disabled = shouldBeDisabled(option)
         option(value=option, disabled=disabled)= option
 
-    label(for='theme') Fashion Flix theme:
+    h3.e-head.mt Cultural Events     
+
+    .lab
+     label(for='theme') 1.Fashion Flix:
+     input#toggle_fashion_show(type='checkbox')
     - let themes = ["Wednesday", "Squid Game", 'Vikings', "Peaky Blinders", "Qala", 'Emily in Paris', 'The School of Good & Evil', 'Lucifer', 'Titans', 'Naruto', 'Demon Slayer', 'Justice league', 'Chainsaw man', 'Death note', 'Tokyo Revengers', 'Jujutsu kaisen']
 
-    select#theme(name='theme' required)
+    select#theme.fashion_show(name='theme' required)
       <option value="" disabled selected>Select your Theme</option>
       each theme in themes
         - let disabled = themeshouldBeDisabled(theme)
@@ -43,19 +47,19 @@ html(lang="en")
     
     
     .dropdown
-     input#toggle_fashion_show(type='checkbox')
-     label(for="fashion_show") 1. Fashion Flix: 
+     
+  
      ol  
       li 
-         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 1" required)
+         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 1",autocomplete="off", required)
       li 
-         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 2" required)
+         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 2",autocomplete="off", required)
       li 
-         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 3" required)
+         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 3",autocomplete="off", required)
       li 
-         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 4" required)
+         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 4",autocomplete="off", required)
       li 
-         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 5")
+         input.fashion_show(type="text",name="fashion_show[]", placeholder="member 5",autocomplete="off",)
          small *mininum 4 participants
 
     .dropdown
@@ -63,15 +67,15 @@ html(lang="en")
      label(for="group_dance") 2. Group Dance: 
      ol  
       li 
-        input.group_dance(type="text", name="group_dance[]", placeholder="member 1" required)
+        input.group_dance(type="text", name="group_dance[]", placeholder="member 1",autocomplete="off", required)
       li 
-        input.group_dance(type="text", name="group_dance[]", placeholder="member 2" required)
+        input.group_dance(type="text", name="group_dance[]", placeholder="member 2",autocomplete="off", required)
       li 
-        input.group_dance(type="text", name="group_dance[]", placeholder="member 3" required)
+        input.group_dance(type="text", name="group_dance[]", placeholder="member 3",autocomplete="off", required)
       li 
-        input.group_dance(type="text", name="group_dance[]", placeholder="member 4" required)
+        input.group_dance(type="text", name="group_dance[]", placeholder="member 4",autocomplete="off", required)
       li 
-        input.group_dance(type="text", name="group_dance[]", placeholder="member 5")
+        input.group_dance(type="text", name="group_dance[]", placeholder="member 5",autocomplete="off",)
         small *mininum 4 participants    
          
     .dropdown
@@ -79,25 +83,25 @@ html(lang="en")
      label(for="mr_ms") 3. Mr & Miss Genesis: 
      ol  
       li 
-         input.mr_ms(type="text",name="mr_ms[]", placeholder="member 1" required)
+         input.mr_ms(type="text",name="mr_ms[]", placeholder="member 1",autocomplete="off", required)
       li 
-         input.mr_ms(type="text",name="mr_ms[]", placeholder="member 2" required)
+         input.mr_ms(type="text",name="mr_ms[]", placeholder="member 2",autocomplete="off", required)
     
     
     .dropdown
      input#toggle_tug_of_war(type='checkbox')
-     label(for="tug_of_war") 4. Thug of War: 
+     label(for="tug_of_war") 4. Tug of War: 
      ol  
       li 
-         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 1" required)
+         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 1",autocomplete="off", required)
       li 
-         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 2" required)
+         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 2",autocomplete="off", required)
       li
-         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 3" required)
+         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 3",autocomplete="off", required)
       li 
-         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 4" required)
+         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 4",autocomplete="off", required)
       li 
-         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 5")
+         input.tug_of_war(type="text",name="tug_of_war[]", placeholder="member 5",autocomplete="off",)
          small *mininum 4 participants
     
     .dropdown
@@ -105,7 +109,7 @@ html(lang="en")
      label(for="surprice_event") 5. Surprise Event: 
      ol  
       li 
-         input.surprice_event(type="text",name="surprice_event", placeholder="member 1" required)
+         input.surprice_event(type="text",name="surprice_event", placeholder="member 1",autocomplete="off", required)
    
     
     .dropdown
@@ -113,7 +117,7 @@ html(lang="en")
      label(for="war_of_word") 6. War of Word: 
      ol  
       li 
-         input.war_of_word(type="text",name="war_of_word", placeholder="member 1" required)
+         input.war_of_word(type="text",name="war_of_word", placeholder="member 1",autocomplete="off", required)
     
     
     .dropdown
@@ -121,7 +125,7 @@ html(lang="en")
      label(for="third_degree") 7.Thrid Degree: 
      ol  
       li 
-         input.third_degree(type="text",name="third_degree", placeholder="member 1" required)
+         input.third_degree(type="text",name="third_degree", placeholder="member 1",autocomplete="off", required)
 
 
     .dropdown
@@ -129,30 +133,30 @@ html(lang="en")
      label(for="meme_making") 8.Meme Making: 
      ol  
       li 
-         input.meme_making(type="text",name="meme_making", placeholder="member 1" required)
+         input.meme_making(type="text",name="meme_making", placeholder="member 1",autocomplete="off", required)
     
-    
+    h3.e-head Technical Events  
     .dropdown
      input#toggle_code_hunt(type='checkbox')
      label(for="code_hunt") 1. Code Hunt: 
      ol  
       li 
-         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 1" required)
+         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 1",autocomplete="off", required)
       li 
-         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 2" required)
+         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 2",autocomplete="off", required)
       li 
-         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 3" required)
+         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 3",autocomplete="off", required)
       li 
-         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 4" required)
+         input.code_hunt(type="text",name="code_hunt[]", placeholder="member 4",autocomplete="off", required)
     
     .dropdown
      input#toggle_blind_coding(type='checkbox')
      label(for="blind_coding") 2. Blind Coding: 
      ol  
       li 
-         input.blind_coding(type="text",name="blind_coding[]", placeholder="member 1" required)
+         input.blind_coding(type="text",name="blind_coding[]", placeholder="member 1",autocomplete="off", required)
       li 
-         input.blind_coding(type="text",name="blind_coding[]", placeholder="member 2" required)
+         input.blind_coding(type="text",name="blind_coding[]", placeholder="member 2",autocomplete="off", required)
    
     
     .dropdown
@@ -160,7 +164,7 @@ html(lang="en")
      label(for="photography") 3.Photography: 
      ol  
       li 
-         input.photography(type="text",name="photography", placeholder="member 1" required)
+         input.photography(type="text",name="photography", placeholder="member 1",autocomplete="off", required)
     
 
     .dropdown
@@ -168,13 +172,13 @@ html(lang="en")
      label(for="cinematic_creation") 4.Cinematic Creation: 
      ol  
       li 
-         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 1" required)
+         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 1",autocomplete="off", required)
       li 
-         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 2" required)
+         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 2",autocomplete="off", required)
       li 
-         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 3" required)
+         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 3",autocomplete="off", required)
       li 
-         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 4" required)
+         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 4",autocomplete="off", required)
    
     
     //- .dropdown
@@ -189,28 +193,29 @@ html(lang="en")
     //-      input(type="text", placeholder="member 3")
     //-   li 
     //-      input(type="text", placeholder="member 4")
-    
+
+    h3.e-head Gaming Events  
     .dropdown
      input#toggle_cs_go(type='checkbox')
      label(for="cs_go") 1. CS-GO: 
      ol  
       li 
-         input.cs_go(type="text",name="cs_go[]", placeholder="member 1")
+         input.cs_go(type="text",name="cs_go[]", placeholder="member 1",autocomplete="off")
       li 
-         input.cs_go(type="text",name="cs_go[]", placeholder="member 2")
+         input.cs_go(type="text",name="cs_go[]", placeholder="member 2",autocomplete="off")
       li 
-         input.cs_go(type="text",name="cs_go[]", placeholder="member 3")
+         input.cs_go(type="text",name="cs_go[]", placeholder="member 3",autocomplete="off")
       li 
-         input.cs_go(type="text",name="cs_go[]", placeholder="member 4")
+         input.cs_go(type="text",name="cs_go[]", placeholder="member 4",autocomplete="off")
       li 
-         input.cs_go(type="text",name="cs_go[]", placeholder="member 5")
+         input.cs_go(type="text",name="cs_go[]", placeholder="member 5",autocomplete="off")
     
     .dropdown
      input#toggle_nfs(type='checkbox')
      label(for="nfs") 2. NFS: 
      ol  
       li 
-         input.nfs(type="text",name="nfs", placeholder="member 1")
+         input.nfs(type="text",name="nfs", placeholder="member 1",autocomplete="off")
 
     
     .dropdown
@@ -218,7 +223,7 @@ html(lang="en")
      label(for="fifa") 3. FIFA 2022: 
      ol  
       li 
-         input.fifa(type="text",name="fifa", placeholder="member 1")
+         input.fifa(type="text",name="fifa", placeholder="member 1",autocomplete="off",)
     
     
      

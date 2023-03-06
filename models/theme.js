@@ -18,67 +18,67 @@ const ThemeSchema = new Schema({
     },
     theme : {
         type :String,
-        required : true
+        default:"Not participating"
     },
     group_dance :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     fashion_show :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     mr_ms :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     tug_of_war :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     surprice_event :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     },
     war_of_word :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     },
     third_degree :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     },
     meme_making :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     },
     code_hunt :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     blind_coding :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     photography :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     },  
     cinematic_creation :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     cs_go :{
         type: [String], 
-        default : "Not selected"
+        default : "Not participating"
     },
     nfs :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     },
     fifa :{
         type: String, 
-        default : "Not selected"
+        default : "Not participating"
     }
   
 })

@@ -30,7 +30,7 @@ h1{
 }
 
 form{
-    padding: 2rem;
+    padding: 1rem;
     background: rgb(15 7 33 / 30%);
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
     backdrop-filter: blur(11.5px);
@@ -42,7 +42,7 @@ form{
     min-height: 60vh;
     border-radius: 10px;
     display: flex;
-  
+   overflow: hidden;
     flex-direction: column;
 }
 
@@ -211,19 +211,19 @@ input[type="checkbox"]::after{
 }
 
 input[type="checkbox" i]::before{
-  /* visibility: none; */
   content: "Select this if you are not participating in this";
   position: absolute;
   width: max-content;
 top: -25px;
 background: rgba(210, 62, 21, 0.57);
-border-radius: 16px;
+border-radius: 5px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px);
 border: 1px solid rgba(184, 42, 35, 0.48);
 padding: 0.1rem;
 visibility: hidden;
+right: 0;
 }
 
 
@@ -247,13 +247,24 @@ input:disabled{
 }
 
 
+.lab{
+  margin-top: 20px;
+}
 
-
+.e-head{
+  text-align: center;
+  color: rgba(223, 22, 22, 0.966);
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+.mt{
+  margin-top: 25px;
+}
 
 @media screen and (max-width: 768px){
     
   form{
-    width: calc(100vw - 30vw);
+    width: 100%;
   }
   .success-container{
     width: calc(100vw - 10vw);
@@ -264,6 +275,9 @@ input:disabled{
   li > input[type=text]{
     padding: 0.3rem;
     width:100%;
+  }
+  input[type="checkbox" i]::before{
+    right: 0;
   }
 }
 

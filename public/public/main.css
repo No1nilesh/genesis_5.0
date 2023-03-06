@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Bitsumishi';
+  src: url('./BITSUMIS.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .creater {
   background-color: black;
   height: 10vh;
@@ -362,11 +369,7 @@
   text-align: center;
   padding: 0 1em;
 }
-@font-face {
-  font-family: 'MyFont';
-  src: url('./BITSUMIS.TTF') format('truetype');
-  font-weight: normal;
-}
+
 
 .text:after {
   content: var(--partialString);
