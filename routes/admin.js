@@ -13,7 +13,7 @@ const flash = require('express-flash');
 const session = require('express-session')
 const pug = require('pug');
 const { body, validationResult } = require("express-validator");
-const fetchuser = require('../middleware/fetchuser');
+
 
 // /admin/signup
 

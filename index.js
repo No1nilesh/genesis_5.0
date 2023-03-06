@@ -13,7 +13,7 @@ const flash = require('express-flash');
 const session = require('express-session')
 connectToMongo();
 const port = process.env.PORT
-
+app.use(express.static('public'));
 app.use(cors())
 app.use(express.json());
 
@@ -32,16 +32,18 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
-
+// app.use(express.static('public'));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')  
+  res.send(('./frontend/index.html'));
+  // res.sendFile(path.join(__dirname+'/views/frontend/index.html'));
 })
  
-app.use("/api/select-theme", require("./routes/select-theme"))
+
+app.use("/api/register", require("./routes/register"))
 app.use("/api/admin", require("./routes/admin"))
 
 

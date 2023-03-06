@@ -1,0 +1,17 @@
+{
+  "name": "genesis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "build": "vite build"
+ 
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.0.1"
+  }
+}

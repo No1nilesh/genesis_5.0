@@ -1,0 +1,342 @@
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Playfair+Display&family=Roboto+Mono:wght@300;500&family=Roboto:wght@500&display=swap");
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('./BITSUMIS.TTF') format('truetype');
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow: initial;
+  color: white;
+  font-family: "Oswald", sans-serif;
+
+}
+/ 
+
+h1 {
+  text-align: center;
+}
+
+/* navbar */
+
+li > a {
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+
+  font-size: 1.2rem;
+}
+
+.bit{
+  font-family: 'Bitsumishi', sans-serif;
+}
+
+.t-shadow{
+  text-shadow:  0 0 5px black;
+}
+
+.event-links > li:hover {
+  background: rgba(42, 25, 79, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(44, 52, 151, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 14px;
+  /* border: 1px solid rgba(64, 21, 97, 0.18); */
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  position: relative;
+  z-index: 97;
+}
+
+.wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 100svh;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2.1);
+  height: 100%;
+  width: 100%;
+}
+
+.foreground {
+  transform: translateZ(-7px) scale(1.5);
+  width: 48%;
+  
+}
+
+.background,
+.foreground {
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+.ge{
+  text-shadow: 1px 4px 6px #cd1e1e;
+  text-align: center;
+}
+
+.section2 {
+  font-size: 1.5rem;
+  padding: 2rem;
+  background-color: #131316;
+  color: white;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+.parent-anime {
+  background-color: rgb(0 0 16);
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  background: rgb(0,0,0);
+/* background: linear-gradient(90deg, rgba(0,0,0,1) 41%, rgba(0,212,255,0.406687675070028) 100%); */
+}
+.glass {
+  background: rgb(15 7 33 / 30%);
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 14px;
+  border: 1px solid rgb(50 12 80 / 18%);
+}
+
+.notvissible {
+  opacity: 0;
+  filter: blur(1px);
+  transform: translateY(10%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.logos {
+  display: flex;
+}
+
+.logo img {
+  height: 21rem;
+  width: 21;
+  border-radius: 5%;
+}
+
+.logo:nth-child(2) {
+  transition-delay: 200ms;
+}
+.logo:nth-child(3) {
+  transition-delay: 400ms;
+}
+.logo:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.z-100{
+  z-index: 100;
+}
+
+#hamburger {
+  position: fixed;
+  top: 23px;
+  right: 1px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hamburger::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+#hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(10px);
+  transition: 0.2s;
+}
+
+#hamburger.open::before {
+  transform: translateY(7px) rotate(45deg);
+}
+#hamburger.open::after {
+  transform: translateY(7px) rotate(-45deg);
+}
+
+@media screen and (max-width: 1360px) {
+  .foreground {
+    transform: translateZ(-5px) scale(1.5);
+    width: 60%;
+    object-fit: cover;
+   
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .font-effect-fire-animation {
+    font-size: 3rem;
+  }
+
+  .bit{
+    font-size: 3.8rem;
+  }
+  .background {
+    transform: translateZ(-10px) scale(2);
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .foreground {
+    transform: translateZ(-5px) scale(1.7);
+    width: 100%;
+    height: auto;
+  }
+
+  .background,
+  .foreground {
+    position: absolute;
+
+    z-index: -1;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .logo img {
+    width: 100%;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .open {
+    display: block;
+  }
+
+  #day1 {
+    min-height: 10vh;
+  }
+  #day2 {
+    min-height: 10vh;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+  .logo:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  .logo:nth-child(3) {
+    transition-delay: 200ms;
+  }
+  .logo:nth-child(4) {
+    transition-delay: 200ms;
+  }
+  
+}
+
+@media screen and (min-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(30, 22, 22);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #020202;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #020202 ;
+  }
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-md {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
+.event-table {
+  --g: 1rem; /* the gap */
+  --b: 5px; /* border thickness*/
+  --c: #700aba; /* the color */
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+.scroll,
+.event-table:hover {
+  --_p: 70%;
+  filter: grayscale(0%);
+  /* animation: mymove .3s infi nite; */
+}

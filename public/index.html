@@ -1,61 +1,432 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis 5.0</title>
+  <link href="/public/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./public/style.css">
+  <link rel="stylesheet" href="./public/main.css">
+  <link rel="stylesheet" href="./public/star.css">
+  <link rel="shortcut icon" href="./assets/genesis.png" type="image/x-icon">
+
+
 </head>
+
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body>
-        
 
-<div class="container mt-2">
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"  onchange="onChange(this)">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+
+  <div class=" w-[100vw] w-[100svw] flex  justify-center">
+
+
+    <div
+      class="navigation fixed  top-[0] md:w-[100%] xl:w-[81rem] border-2 rounded-md z-[100] mx-auto glass py-[10px] ">
+      <div class="flex justify-evenly flex-col xl:flex-row md:items-center">
+        <img src="./assets/png_20230124_195412_0000-removebg-preview.png"
+          class=" w-[37px] md:w-[60px] hidden md:block  md:static  " alt="">
+        <div class="flex justify-evenly items-center">
+          <img src="./assets/png_20230124_195412_0000-removebg-preview.png"
+            class=" w-[37px] md:w-[60px] md:hidden  md:static " alt="">
+
+
+          <div class="text-[1.1rem] md:text-center text-[#ff5800]">
+            <h2 class=" ">MES College of Arts and Commerce</h2>
+            <!-- <h2>Zuarinagar Goa -403 726</h2> -->
+            <h2 class="hidden md:block">Accredited by NAAC with B+ Grade CGPA of 2.68(4ᵗʰ Cycle)</h2>
+          </div>
+
+
+          <div class=" md:hidden  ">
+
+            <div id="hamburger"></div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="pass" name="password" onchange="onChange(this)">
+
+        <ul class=" event-links  hidden md:flex transition-all md:items-center text-center text-[1rem]" id="sidebar">
+          <li class="my-2"><a href="#home">Home</a></li>
+          <hr class="w-[80%] mx-auto md:hidden h-px  border-0 dark:bg-gray-700">
+          <li class="my-2"> <a href="#eventTable">Events</a> </li>
+          <hr class="w-[80%] mx-auto md:hidden h-px  border-0 dark:bg-gray-700">
+          <li class="my-2"><a href="#schedule">Schedule</a></li>
+          <hr class="w-[80%] mx-auto md:hidden h-px border-0 dark:bg-gray-700">
+          <li class="my-2"> <a href="#sponsors">Sponsors</a> </li>
+          <hr class="w-[80%] mx-auto md:hidden h-px border-0 dark:bg-gray-700">
+          <li class="my-2"> <a href="/api/register">Register</a> </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="wrapper" id="home">
+    <header class="relative">
+
+
+      <div class="space  noite stars1 background">
+        <span class="shooting-star"></span>
+        <span class="shooting-star"></span>
+        <span class="shooting-star"></span>
+        <span class="shooting-star"></span>
+        <span class="shooting-star z-[99] delay-[1s]"></span>
+        <div class="main"></div>
+        <canvas />
+        <div class="chuvaMeteoro"> </div>
+      </div>
+
+      <img src="./assets/genesis.png"
+        class=" relative foreground aspect-square w-[25rem]  shadow-[#3961b4] drop-shadow-lg" alt=""
+        loading="eager">
+        <span class="shooting-star-top z-[99] "></span>
+
+  
+
+      <div class="absolute bottom-[20px] right-[20px]">
+        <div class="flex justify-evenly text-[#ff5800] ">
+          <div class="flex flex-col items-center mx-[6px]">
+            <p id="days" class="days text-[1.5rem]">00</p>
+            <span>Days</span>
+          </div>
+
+          <div class="flex flex-col items-center mx-[6px]">
+            <p id="hours" class="hours text-[1.5rem]">00</p>
+            <Span>Hours</Span>
+          </div>
+
+          <div class="flex flex-col items-center mx-[6px] ">
+            <p id="minutes" class="minutes text-[1.5rem]">00</p>
+            <span>Minutes</span>
+          </div>
+
+          <div class="flex flex-col items-center mx-[6px]">
+            <p id="seconds" class="seconds text-[1.5rem]">00</p>
+            <span>Seconds</span>
+          </div>
+
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+
+
+
+
+      <div class=" absolute  md:text-[5rem]  top-[54vh] t-shadow ge bit z-100">GENESIS 5.0</div>
+    </header>
+
+
+
+
+
+
+
+    <div class=" text-[1.4rem] p-8 bg-[#333] text-[white] glass min-h-[56vh] md:p-[15rem]">
+
+      <h1 class=" text-center text-[3rem] ge">GENESIS 2023</h1>
+      <h1 class=" text-center text-[2.8rem] ">Department of Computer Application </h1>
+      <p class="text-gray-300">
+
+
+        "GENESIS" symbolizes the "Rise of the Next Generation." The world keeps advancing when it comes to Technology:
+        Typewriters were replaced by Computers, Telephones by Mobile Phones.
+
+        "GENESIS" will compromise of various "on-stage" and "off-stage" competitions in the field of IT. This is a
+        learning process by which student will gain an additional knowledge and experience under various aspects in the
+        IT field such as coding, gaming, Photoshop, PC assembling, etc.
+
+        This will boost the morale and confidence of the students to compete in the current and future IT Field. This
+        will help them to get extra experience in the field of their current study which would act as added study
+        reference to the students. They will get exposure to practical, in a competitive way.
+      </p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="parent-anime relative overflow-hidden">
+    <div class="notvissible my-8 " id="Rules">
+      <div class="glass lg:w-[63.7rem] w-[83%] my-4 mx-auto">
+        <h1 class=" text-[3rem] font-bold shadow-md shadow-indigo-500/50 ge ">General Rules</h1>
+      </div>
+      <div
+        class="event-table cardGlow  border-sky-200  rounded-2xl shadow-xl shadow-indigo-500/50 glass flex justify-center w-[90%] md:w-[67%] mx-auto">
+        <ul class="md:p-[2rem] list-disc md:text-[1.3rem] text-[1rem]">
+          <li>Regitration fee Rs. 1500/- Per Team.</li>
+          <li>Min 12 or max 15 Participants per College.</li>
+          <li>College Id is mandatory for Regulation.</li>
+          <li>Judges decision will be the final and binding.</li>
+          <li>Early birds will get 50 points.</li>
+          <li>If the team participant is found to be indisciplined or violates the CODE OF CONDUCT, it will lead to
+            DISQUALIFICATION.
+          </li>
+          <li>Kindly maintain Decency and Decorum, Your Cooperation is the key to SUCCESS.</li>
+          <li> Participants are responsible for their belongings, College is not responsible for any loss.</li>
+          <li> Team doesn’t participate in per event then -5 points. </li>
+          <li>Every event including gaming event also have points..</li>
+
+        <!-- <a href="/api/select-theme"><span class="text-red-500 underline text-[2rem]">Register for Fashion Show Theme:</span></a> 
+          <button
+            class=" shadow-sm mx-4  shadow-indigo-500/50 mt-6 p-1 border-indigo-400 border-[1px] rounded-md">Register</button> -->
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <section class="notvissible  py-3" id="eventTable">
+      <div class="glass lg:w-[63.7rem] w-[83%] my-4">
+        <h1 class=" text-[3rem] font-bold shadow-md shadow-indigo-500/50 ge ">Events</h1>
+      </div>
+      <div class=" event-table cardGlow rounded-2xl shadow-md shadow-indigo-500/50  lg:w-[63.7rem] ">
+
+        <div class="event-cards flex flex-col p-[10px]">
+
+
+          <div class="flex justify-evenly flex-col  md:flex-row gap-3">
+
+
+
+            <a href="technical.html">
+              <div class="cultural glass hover:scale-[1.1] transition-all ease-out">
+                <h1 class="text-center">Technical</h1>
+
+                <img src="./assets/—Pngtree—desktop personal computer for gaming_7667379.png" class="w-[20rem]" alt="">
+              </div>
+            </a>
+
+            <a href="cultural.html">
+              <div class="cultural glass hover:scale-[1.1] transition-all ease-out">
+                <h1 class="text-center">Cultural</h1>
+
+                <img src="./assets/20944513.png" class="w-[20rem]" alt="">
+              </div>
+            </a>
+
+            <a href="gaming.html">
+              <div class="cultural glass hover:scale-[1.1] min-h-[23rem] transition-all ease-out">
+                <h1 class="text-center">Gaming</h1>
+
+                <img src="./assets/gaming.png" class="w-[20rem] p-[2rem] mt-[1rem]" alt="">
+              </div>
+            </a>
+          </div>
+
+          <a class="shadow-lg  shadow-indigo-500/50 mt-6 p-1 border-indigo-400 border-[1px] rounded-md text-[1.3rem] text-center"
+              href="/api/register">Register Now</a>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-</div>
+      </div>
+    </section>
+
+    <div id="schedule" class="grid place-content-center gap-20 py-20 align-middle">
+
+      <div class="notvissible " id="day1 ">
+        <div class="glass lg:w-[63.7rem] w-[83%] my-4 mx-auto">
+          <h1 class=" text-[3rem] font-bold shadow-md shadow-indigo-500/50 ge ">Day 1</h1>
+        </div>
+        <div
+          class="event-table cardGlow  border-sky-200  rounded-2xl shadow-xl shadow-indigo-500/50 glass flex justify-center">
+          <img src="./assets/demoday1.png" alt="" class="w-[50rem] " loading="eager">
+        </div>
+
+      </div>
+
+      <div class="notvissible " id="day2">
+        <div class="glass lg:w-[63.7rem] w-[83%] my-4 mx-auto">
+          <h1 class=" text-[3rem] font-bold shadow-md shadow-indigo-500/50 ge ">Day 2</h1>
+        </div>
+        <div
+          class="event-table cardGlow  border-sky-200  rounded-2xl shadow-xl shadow-indigo-500/50 glass flex justify-center">
+          <img src="./assets/demoday2.png" alt="" class="w-[50rem] " loading="eager">
+        </div>
+      </div>
 
 
-<!-- <script>
-    const emailEl = document.querySelector("#email");
-    const passEl = document.querySelector("#pass");
-
-    let credentials = {email:"" , password:""}
-
-function onChange(e){
- let {...credentials} =  {email : emailEl.value }
- console.log({...credentials})
-}
-
-</script> -->
+    </div>
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </body>
-    </html>
+
+    <section class=" gap-[1rem] py-20" id="sponsors">
+
+      <div class="glass lg:w-[63.7rem] w-[90%]">
+        <h1 class=" text-[3rem] font-bold shadow-md shadow-indigo-500/50 ge">Sponsors</h1>
+      </div>
+      <div class="event-table cardGlow glass lg:w-[64rem] w-[83%] shadow-md shadow-indigo-500/50 ">
+        <div class="logos gap-[0.8rem] justify-center p-2 ">
+          <div class="logo notvissible  glass  ">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSINMC3gVborbH2v7vOE-M6hC22KFK-WfT8ySc9_2wC7DzfE1be7k4sG4B5JTOFVQn8uGQ&usqp=CAU"
+              alt="" loading="eager">
+          </div>
+          <div class="logo notvissible notvissiblex  glass">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBsbCAQtQimp5yI0Zx4vyR_FzPLUVzkdjDBN0N4_LAUo59inNQrSp6-Iz7qrfAXBENLGI&usqp=CAU"
+              alt="" loading="eager">
+          </div>
+          <div class="logo notvissible shadow-lg glass">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZMKbVnaZ0Mm1560YGIi3683PWV_DsYwYYZD5cbFgStWcplZtGi46eWb7VMeE1EHdq4c&usqp=CAU"
+              alt="" loading="eager">
+          </div>
+          <div class="logo notvissible notvissiblex  glass">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOVb2E95HPCjWuzLRuUohusS5L5EB9cQs4La4lS05hoa3DO757apgPRxCnI9GXmv0RY4&usqp=CAU"
+              alt="" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <footer
+      class=" relative p-4 bg-white rounded-sm shadow md:flex md:items-center md:justify-around md:p-6 dark:bg-gray-800 mt-8 gap-3 ">
+
+      <div class="flex justify-center items-center flex-col meslogoimgaddress">
+        <img src="./assets/png_20230124_195412_0000-removebg-preview.png" class=" w-[200px]  md:static  " alt="">
+        <div class="text-[1.1rem] md:text-center text-[#ff5800]">
+          <h2 class="text-center ">MES College of Arts and Commerce</h2>
+
+          <h2 class="">Accredited by NAAC with B+ Grade CGPA of 2.68(4ᵗʰ Cycle)</h2>
+        </div>
+        <div class="loaction flex justify-center  items-center">
+          <a href="https://goo.gl/maps/EnWVE4q4FFWx9nZg8" target="_blank"><img src="/assets/pngwing.com.png"
+              class="w-[45px]" alt=""></a>
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            Zuarinagar, Vasco Goa 403802</span>
+        </div>
+      </div>
+
+      <!-- <div class="flex justify-center flex-col items-center">
+        <img src="./assets/firey_red_pheonix_logo (1).png"
+        class=" w-[200px] rounded-[50%] shadow-[#3961b4] drop-shadow-lg" alt="" loading="eager">
+        <div class=" text-lg font-bold text-center t-shadow">GENESIS 5.0</div>
+      </div> -->
+
+      <div class="socialMedia flex justify-center flex-col gap-3 ">
+        <span class="text-lg text-gray-500 sm:text-center dark:text-gray-400 text-center">Social Media</span>
+        <div class=" flex gap-2 justify-center">
+          <a href="https://twitter.com/mes_arts" target="_blank"><img class="w-[40px]" src="/assets/twitter.png"
+              alt=""></a>
+          <a href="https://www.instagram.com/mescollegegoa/" target="_blank"><img class="w-[40px]"
+              src="/assets/instagram.webp" alt=""></a>
+          <a href="https://www.facebook.com/mesgoa" target="_blank"><img class="w-[40px]" src="/assets/facebook.webp"
+              alt=""></a>
+        </div>
+
+        <span class="text-lg text-gray-500 sm:text-center dark:text-gray-400 text-center">Contact Us</span>
+        <a class="flex items-center gap-1 justify-center" href="tel:0832-2555772" target="_blank"><img class="w-[40px]"
+            src="/assets/—Pngtree—call vector icon_4236989.png" alt="">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">0832-2555772</span></a>
+
+        <a href="mailto:mescollege1@gmail.com" class="flex items-center gap-1 justify-center" target="_blank"><img
+            src="/assets/mail.png" class="w-[40px]" alt=""><span
+            class="text-sm text-gray-500 sm:text-center dark:text-gray-400">mescollege1@gmail.com</span></a>
+      </div>
+
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 text-center md:hidden relative">© 2022 <a
+          href="https://mescollege.com" class="hover:underline">Genesis_5.0™</a>. All Rights Reserved.
+      </span>
+      <a href="https://github.com/No1nilesh" class="block md:hidden relative" target="_blank">
+        <img src="/assets/github-mark-white.png" class="absolute z-10 w-[20px] md:w-[30px] right-[10px] bottom-[10px]"
+          alt="github"></a>
+
+    </footer>
+
+    <div class="hidden lg:block relative ">
+      <a href="https://github.com/No1nilesh" target="_blank">
+        <img src="/assets/github-mark-white.png" class="absolute z-10 w-[40px] right-[20px] bottom-[20px]"
+          alt="github"></a>
+      <div class="creater ">
+
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="content">
+          <div class="text"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <script src="./JavaScript/navfunc.js"></script>
+  <script src="./JavaScript/main.js"></script>
+  <script src="./JavaScript/timer.js"></script>
+  <!-- <script src="three.js"></script> -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"></script>
+
 </body>
+
 </html>

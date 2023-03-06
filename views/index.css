@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     color: whitesmoke;
-    
+    box-sizing: border-box;
     font-family: "Oswald", sans-serif;
     
 }
@@ -38,7 +38,7 @@ form{
     border-radius: 14px;
     border: 1px solid rgb(50 12 80 / 18%);
     width: 34%;
-    margin: 30px auto;
+    /* margin: 30px auto; */
     min-height: 60vh;
     border-radius: 10px;
     display: flex;
@@ -75,6 +75,11 @@ option{
     border-radius: 5px;
     background-color: rgb(0 0 16);
     cursor: pointer;
+}
+
+small{
+  float: right;
+  color: red;
 }
 
 button, input[type=submit]{
@@ -116,21 +121,22 @@ button:hover, input[type=submit]:hover{
 
 h2{
     text-align: center;
-    padding: 2rem;
+   
 }
 
 .selectTheme{
-  font-size: 4vmin;
+  font-size: 2.3rem;
 }
 #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 80%;
+    width: 96%;
+    font-size: 0.8em;
   }
   
   #customers td, #customers th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 2px;
   }
   
   #customers tr:nth-child(even){background-color: #25043f;}
@@ -140,7 +146,7 @@ h2{
   #customers th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #401866;
     color: white;
   }
@@ -169,6 +175,79 @@ h2{
     border: 1px solid #8d6ea4;
   }
 
+/* registration form */
+ol{
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  padding: 0.6rem;
+  list-style: none;
+}
+
+li > input[type=text]{
+  padding: 0.3rem;
+  width: 100%;
+  outline: 1px inherit;
+}
+
+.dropdown{
+  margin: 10px 0;
+}
+input[type="checkbox" i]{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  float: right;
+  position: relative;
+  right: 12px;
+  top: 10px;
+}
+input[type="checkbox"]::after{
+    content: "check box";
+    position: absolute;
+    width: max-content;
+    right: 24px;
+}
+
+input[type="checkbox" i]::before{
+  /* visibility: none; */
+  content: "Select this if you are not participating in this";
+  position: absolute;
+  width: max-content;
+top: -25px;
+background: rgba(210, 62, 21, 0.57);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 1px solid rgba(184, 42, 35, 0.48);
+padding: 0.1rem;
+visibility: hidden;
+}
+
+
+
+input[type="checkbox" i]:hover::before{
+  visibility: visible;
+}
+
+.instructions{
+  margin: 10px 0;
+  color: red;
+  margin: 10px 0;
+    color: red;
+    /* outline: 1px solid gray; */
+    padding: 6px;
+    border: 1px solid rgb(10 10 70);
+}
+
+input:disabled{
+  filter: grayscale(70%);
+}
+
+
+
 
 
 @media screen and (max-width: 768px){
@@ -182,4 +261,9 @@ h2{
   .success-box{
     padding: 1rem;
   }
+  li > input[type=text]{
+    padding: 0.3rem;
+    width:100%;
+  }
 }
+

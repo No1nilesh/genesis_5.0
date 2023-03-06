@@ -32,18 +32,18 @@ router.post(
 
     
     try {
-      const { email, college, theme } = req.body;
+      const { email, college, theme , group_dance, fifa, nfs, cs_go, cinematic_creation, photography, blind_coding, code_hunt, meme_making, third_degree, war_of_word, surprice_event, tug_of_war, mr_ms, fashion_show} = req.body;
       success = false;
       themeDb = await Event.findOne({ theme: theme });
       collegeDb = await Event.findOne({ college: college });
 
       if (themeDb) {
-        res.status(400).send({ error: "theme is not availible" });
+        res.status(409).send({ error: "theme is not availible" });
       }
 
       if (collegeDb) {
         res
-          .status(400)
+          .status(409)
           .send({ error: "This college is already selected the theme" });
       }
 
@@ -51,15 +51,38 @@ router.post(
         email: email,
         college: college,
         theme: theme,
+        group_dance: group_dance,
+        fifa: fifa,
+        nfs: nfs,
+        cs_go: cs_go,
+        cinematic_creation: cinematic_creation,
+        photography: photography,
+        blind_coding: blind_coding,
+        code_hunt:code_hunt,
+        meme_making: meme_making,
+        third_degree: third_degree,
+        war_of_word: war_of_word,
+        surprice_event: surprice_event,
+        tug_of_war: tug_of_war,
+        mr_ms:mr_ms,
+        fashion_show: fashion_show,
+        
       });
 
     const valtheme =  themes.save();
     success=true;
       if(valtheme){ 
-        res.redirect(`/api/select-theme/success?data=${encodeURIComponent(JSON.stringify(req.body))}`)
+        res.redirect(`/api/register/success?data=${encodeURIComponent(JSON.stringify(req.body))}`)
       }
+      res.json(themes)
     } catch (error) {
-      res.status(500).send(error.message);
+      if (res.headersSent) {
+        console.error('Headers already sent', error);
+      } else {
+        // Handle other errors
+        console.error('Error getting data from database', error);
+        res.status(500).json({ error: 'Internal server error' });
+      }
     }
   }
 );

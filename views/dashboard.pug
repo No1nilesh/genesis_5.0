@@ -14,11 +14,66 @@ html(lang="en")
         th Email
         th College
         th Theme
+        th(colspan='5') Fashion Show
+        th Surprice Event
+        th War of word
+        th Photography
+        th(colspan='5') Tug of war
+        th Third degree
+        th(colspan='4') Cinematic creation
+        th(colspan='2') Mr & Miss Genesis
+        th(colspan='4') Code hunt
+        th(colspan='2') Blind coding
+        th Meme Making
+        th(colspan='5') Cs Go
+        th Fifa
+        th Nfs
 
-      each n in event
+      each item in event
         tr
-          td= n.email
-          td= n.college
-          td= n.theme
-        
+          td= item.email
+          td= item.college
+          td= item.theme
+          if item.fashion_show && item.fashion_show.length > 0 && item.fashion_show[0] !== 'Not selected'
+            each subfield in item.fashion_show
+              td= subfield
+          else
+            td(colspan=5) 
+          td=item.surprice_event
+          td=item.war_of_word
+          td=item.photography
+          if item.tug_of_war && item.tug_of_war.length > 0 && item.tug_of_war[0] !== 'Not selected'
+            each subfield in item.tug_of_war
+              td= subfield
+          else
+            td(colspan=5) Not Selected
+          td=item.third_degree
+          if item.cinematic_creation && item.cinematic_creation.length > 0 && item.cinematic_creation[0] !== 'Not selected'
+            each subfield in item.cinematic_creation
+              td= subfield
+          else
+            td(colspan=4) Not Selected 
+          if item.mr_ms && item.mr_ms.length > 0 && item.mr_ms[0] !== 'Not selected'
+            each subfield in item.mr_ms
+              td= subfield
+          else
+            td(colspan=2) Not Selected
+          if item.code_hunt && item.code_hunt.length > 0 && item.code_hunt[0] !== 'Not selected'
+            each subfield in item.code_hunt
+              td= subfield
+          else
+            td(colspan=4) Not Selected
+          if item.blind_coding && item.blind_coding.length > 0 && item.blind_coding[0] !== 'Not selected'
+            each subfield in item.blind_coding
+              td= subfield
+          else
+            td(colspan=2) Not Selected
+          td= item.meme_making 
+          if item.cs_go && item.cs_go.length > 0 && item.cs_go[0] !== 'Not selected'
+            each subfield in item.cs_go
+              td= subfield
+          else
+            td(colspan=5) Not Selected
+          td=item.fifa
+          td=item.nfs
                         

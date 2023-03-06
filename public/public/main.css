@@ -1,0 +1,376 @@
+.creater {
+  background-color: black;
+  height: 10vh;
+  display: grid;
+  grid-template: 100%/3fr repeat(54, 1fr) 3fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  /* // border: 1px solid #fff1; */
+  z-index: 2;
+}
+
+.cell:nth-child(1):hover ~ .content {
+  --partialString: "T";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(2):hover ~ .content {
+  --partialString: "Th";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(3):hover ~ .content {
+  --partialString: "Thi";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(4):hover ~ .content {
+  --partialString: "This";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(5):hover ~ .content {
+  --partialString: "This ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(6):hover ~ .content {
+  --partialString: "This  ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(7):hover ~ .content {
+  --partialString: "This  W";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(8):hover ~ .content {
+  --partialString: "This  We";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(9):hover ~ .content {
+  --partialString: "This  Web";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(10):hover ~ .content {
+  --partialString: "This  Webs";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(11):hover ~ .content {
+  --partialString: "This  Websi";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(12):hover ~ .content {
+  --partialString: "This  Websit";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(13):hover ~ .content {
+  --partialString: "This  Website";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(14):hover ~ .content {
+  --partialString: "This  Website ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(15):hover ~ .content {
+  --partialString: "This  Website  ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(16):hover ~ .content {
+  --partialString: "This  Website  i";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(17):hover ~ .content {
+  --partialString: "This  Website  is";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(18):hover ~ .content {
+  --partialString: "This  Website  is ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(19):hover ~ .content {
+  --partialString: "This  Website  is  ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(20):hover ~ .content {
+  --partialString: "This  Website  is  D";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(21):hover ~ .content {
+  --partialString: "This  Website  is  De";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(22):hover ~ .content {
+  --partialString: "This  Website  is  Dev";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(23):hover ~ .content {
+  --partialString: "This  Website  is  Deve";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(24):hover ~ .content {
+  --partialString: "This  Website  is  Devel";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(25):hover ~ .content {
+  --partialString: "This  Website  is  Develo";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(26):hover ~ .content {
+  --partialString: "This  Website  is  Develop";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(27):hover ~ .content {
+  --partialString: "This  Website  is  Develope";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(28):hover ~ .content {
+  --partialString: "This  Website  is  Developed";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(29):hover ~ .content {
+  --partialString: "This  Website  is  Developed ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(30):hover ~ .content {
+  --partialString: "This  Website  is  Developed  ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(31):hover ~ .content {
+  --partialString: "This  Website  is  Developed  b";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(32):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(33):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(34):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(35):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  '";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(36):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'N";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(37):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Ni";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(38):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nil";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(39):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nile";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(40):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Niles";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(41):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(42):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh ";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(43):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh G";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(44):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Ga";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(45):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gau";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(46):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gaut";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(47):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gauta";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(48):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(49):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'.";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(50):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'..";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(51):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'...";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(52):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'....";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(53):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'.....";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(54):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'......";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(55):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'.......";
+  --size: 32px;
+  --color: #fff;
+}
+
+.cell:nth-child(56):hover ~ .content {
+  --partialString: "This  Website  is  Developed  by  'Nilesh Gautam'........";
+  --size: 32px;
+  --color: #fff;
+}
+
+.content {
+  --partialString: "Hover over the screen to reveal the text...";
+  --color: #333;
+  --size: 16px;
+  position: absolute;
+
+  display: flex;
+  /* // justify-content: center; */
+  align-items: center;
+  text-align: center;
+  padding: 0 1em;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('./BITSUMIS.TTF') format('truetype');
+  font-weight: normal;
+}
+
+.text:after {
+  content: var(--partialString);
+  font-family: 'Bitsumishi', sans-serif;
+  font-size: var(--size);
+  color: var(--color);
+}/*# sourceMappingURL=main.css.map */
