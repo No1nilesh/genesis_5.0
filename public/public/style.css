@@ -1,9 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald&family=Playfair+Display&family=Roboto+Mono:wght@300;500&family=Roboto:wght@500&display=swap");
-
 @font-face {
-  font-family: 'Bitsumishi';
-  src: url('./BITSUMIS.TTF') format('truetype');
+  font-family: "Bitsumishi";
+  src: url("./BITSUMIS.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,10 +14,12 @@ body {
   margin: 0;
   overflow: initial;
   color: white;
-  font-family: "Oswald", sans-serif;
-
+  font-family: "Bitsumishi", sans-serif;
 }
 
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
 
 h1 {
   text-align: center;
@@ -35,21 +35,26 @@ li > a {
   font-size: 1.2rem;
 }
 
-.bit{
-  font-family: 'Bitsumishi', sans-serif;
+.bit {
+  font-family: "Bitsumishi", sans-serif;
 }
 
-.t-shadow{
-  text-shadow:  0 0 5px black;
+.t-shadow {
+  text-shadow: 0 0 5px black;
 }
 
-.event-links > li:hover {
-  background: rgba(42, 25, 79, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(44, 52, 151, 0.37);
+li > a:hover {
+  color: #131316;
+}
+.event-links > li:hover,
+.hover:hover {
+  background: hsl(186 100% 69%);
+  box-shadow: inset 0 0 0.5em 0 hsl(186 100% 69%), 0 0 0.5em 0 hsl(186 100% 69%);
   backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
-  border-radius: 14px;
-  /* border: 1px solid rgba(64, 21, 97, 0.18); */
+  border-radius: 10px;
+  color: #131316;
+  transition: 200ms ease-in;
 }
 
 .wrapper {
@@ -86,7 +91,6 @@ header {
 .foreground {
   transform: translateZ(-7px) scale(1.5);
   width: 48%;
-  
 }
 
 .background,
@@ -95,7 +99,7 @@ header {
   object-fit: cover;
   z-index: -1;
 }
-.ge{
+.ge {
   text-shadow: 1px 4px 6px #cd1e1e;
   text-align: center;
 }
@@ -119,8 +123,7 @@ section {
   padding: 0;
   margin: 0;
   font-size: 2rem;
-  background: rgb(0,0,0);
-/* background: linear-gradient(90deg, rgba(0,0,0,1) 41%, rgba(0,212,255,0.406687675070028) 100%); */
+  background: rgb(0, 0, 0);
 }
 .glass {
   background: rgb(15 7 33 / 30%);
@@ -132,25 +135,17 @@ section {
 }
 
 .notvissible {
-  opacity: 0;
-  filter: blur(1px);
-  transform: translateY(10%);
-  transition: all 1s;
+  transform: translateY(30%);
+  transition: all 0.6s;
 }
 
 .show {
-  opacity: 1;
-  filter: blur(0);
   transform: translateX(0);
-}
-
-.logos {
-  display: flex;
 }
 
 .logo img {
   height: 21rem;
-  width: 21;
+  width: 21rem;
   border-radius: 5%;
 }
 
@@ -164,9 +159,6 @@ section {
   transition-delay: 600ms;
 }
 
-.z-100{
-  z-index: 100;
-}
 
 #hamburger {
   position: fixed;
@@ -211,18 +203,10 @@ section {
     transform: translateZ(-5px) scale(1.5);
     width: 60%;
     object-fit: cover;
-   
   }
 }
 
 @media screen and (max-width: 768px) {
-  .font-effect-fire-animation {
-    font-size: 3rem;
-  }
-
-  .bit{
-    font-size: 3.8rem;
-  }
   .background {
     transform: translateZ(-10px) scale(2);
     width: 100%;
@@ -239,18 +223,7 @@ section {
   .background,
   .foreground {
     position: absolute;
-
     z-index: -1;
-  }
-
-  .logos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .logo img {
-    width: 100%;
   }
 
   #hamburger {
@@ -261,16 +234,7 @@ section {
     display: block;
   }
 
-  #day1 {
-    min-height: 10vh;
-  }
-  #day2 {
-    min-height: 10vh;
-  }
 
-  .navigation {
-    width: 100%;
-  }
   .logo:nth-child(2) {
     transition-delay: 200ms;
   }
@@ -280,7 +244,6 @@ section {
   .logo:nth-child(4) {
     transition-delay: 200ms;
   }
-  
 }
 
 @media screen and (min-width: 480px) {
@@ -299,24 +262,8 @@ section {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #020202 ;
+    background: #020202;
   }
-}
-
-.text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.text-shadow-md {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-.text-shadow-lg {
-  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.text-shadow-none {
-  text-shadow: none;
 }
 
 .event-table {
@@ -339,5 +286,4 @@ section {
 .event-table:hover {
   --_p: 70%;
   filter: grayscale(0%);
-  /* animation: mymove .3s infi nite; */
 }

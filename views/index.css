@@ -279,5 +279,6 @@ input:disabled{
   input[type="checkbox" i]::before{
     right: 0;
   }
+
 }
 
