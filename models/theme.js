@@ -12,6 +12,10 @@ const ThemeSchema = new Schema({
     type: String,
     required: true,
   },
+  theme: {
+    type: String,
+    default: "Not participating",
+  },
   group_dance: {
     type: [String],
     default: "Not participating",
