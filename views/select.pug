@@ -34,13 +34,7 @@ html(lang="en")
     .lab
      label(for='theme') 1.Fashion Flix:
      input#toggle_fashion_show(type='checkbox')
-    - let themes = ["Wednesday", "Squid Game", 'Vikings', "Peaky Blinders", "Qala", 'Emily in Paris', 'The School of Good & Evil', 'Lucifer', 'Titans', 'Naruto', 'Demon Slayer', 'Justice league', 'Chainsaw man', 'Death note', 'Tokyo Revengers', 'Jujutsu kaisen']
-
-    select#theme.fashion_show(name='theme' required)
-      <option value="" disabled selected>Select your Theme</option>
-      each theme in themes
-        - let disabled = themeshouldBeDisabled(theme)
-        option(value=theme, disabled=disabled)= theme
+  
 
 
     
@@ -231,7 +225,7 @@ html(lang="en")
     button#themeBtn(type='submit') Submit
     
       -function shouldBeDisabled(option) {  const disabledOptions = colleges;  return disabledOptions.includes(option) }
-      -function themeshouldBeDisabled(theme) {  const disabledOptions = Ethemes;  return disabledOptions.includes(theme) }
+      //- -function themeshouldBeDisabled(theme) {  const disabledOptions = Ethemes;  return disabledOptions.includes(theme) }
       script.
        function toggleInputs(selector) {
        const inputs = document.querySelectorAll(`.${selector}`);
@@ -316,7 +310,13 @@ html(lang="en")
 
 
 
+       //-  - let themes = ["Wednesday", "Squid Game", 'Vikings', "Peaky Blinders", "Qala", 'Emily in Paris', 'The School of Good & Evil', 'Lucifer', 'Titans', 'Naruto', 'Demon Slayer', 'Justice league', 'Chainsaw man', 'Death note', 'Tokyo Revengers', 'Jujutsu kaisen']
 
+       //-  select#theme.fashion_show(name='theme' required)
+       //-    <option value="" disabled selected>Select your Theme</option>
+       //-    each theme in themes
+       //-      - let disabled = themeshouldBeDisabled(theme)
+       //-      option(value=theme, disabled=disabled)= theme
 
 
 

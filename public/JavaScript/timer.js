@@ -1,7 +1,7 @@
-const countDownDate = new Date("Mar 31 2023, 00:00:00").getTime();
+const countDownDate = new Date("Mar 28 2023, 00:00:00").getTime();
 const x = setInterval(function(){
-  const now =new Date().getTime();
-  const distance = countDownDate - now;
+  const now =new Date();
+  const distance = countDownDate - now.getTime();
 
   const days = Math.floor(distance/(1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -12,5 +12,11 @@ const x = setInterval(function(){
   document.getElementById("hours").innerHTML = hours;
   document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
-
+  
+  if(now >= countDownDate ){
+    document.getElementById("days").innerHTML = "GENESIS";
+    document.getElementById("hours").innerHTML = "IS";
+    document.getElementById("minutes").innerHTML = "LIVE";
+    document.getElementById("seconds").innerHTML = "NOW";
+  }
 }, 1000);

@@ -287,3 +287,51 @@ section {
   --_p: 70%;
   filter: grayscale(0%);
 }
+
+/* type writer */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s  infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 45% }
+} 
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  0% { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+@media screen and (max-width: 768px) {
+  /* The typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 94% }
+} 
+}
+
+
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  /* margin-left: 30px;
+  margin-top: 5px; */
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5px); }
+  100%   { transform: translate(0, -0px); }   
+}
