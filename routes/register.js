@@ -3,6 +3,7 @@ const router = express.Router();
 const Event = require("../models/theme");
 const pug = require('pug');
 const { body, validationResult } = require("express-validator");
+const catchAsyncErro = require("../Errorhandler/catchAsyncErro");
 
 // /api/select-theme
 
@@ -21,16 +22,14 @@ router.post(
     body("email").isEmail(),
     body("theme").isLength({ min: 3 }),
   ],
-  async (req, res) => {
+  catchAsyncErro(
+  async (req, res, next) => {
 
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).render('error')
     }
-
-
-    
     try {
       const { email, college, theme , group_dance, fifa, nfs, cs_go, cinematic_creation, photography, blind_coding, code_hunt, meme_making, third_degree, war_of_word, surprice_event, tug_of_war, mr_ms, fashion_show} = req.body;
       success = false;
@@ -69,7 +68,7 @@ router.post(
         
       });
 
-    const valtheme =  themes.save();
+    const valtheme = await themes.save();
     success=true;
       if(valtheme){ 
         res.redirect(`/api/register/success?data=${encodeURIComponent(JSON.stringify(req.body))}`)
@@ -78,6 +77,7 @@ router.post(
     } catch (error) {
       if (res.headersSent) {
         console.error('Headers already sent', error);
+        console.log(error)
       } else {
         // Handle other errors
         console.error('Error getting data from database', error);
@@ -85,7 +85,7 @@ router.post(
       }
     }
   }
-);
+))
 
 router.get('/success', (req , res)=>{
   const theme = JSON.parse(decodeURIComponent(req.query.data));
