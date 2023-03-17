@@ -135,8 +135,8 @@ section {
 }
 
 .notvissible {
-  transform: translateY(30%);
-  transition: all 0.6s;
+  transform: translateY(10%);
+  transition: all 1s;
 }
 
 .show {
@@ -296,14 +296,14 @@ section {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(40, end),
+    typing 3.5s steps(60, end),
     blink-caret .75s  infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
   from { width: 0; }
-  to { width: 45% }
+  to { width: 100% }
 } 
 
 /* The typewriter cursor effect */
@@ -326,6 +326,30 @@ section {
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+ 
+    /* position: absolute;
+    top: 50%; 
+    right: 50%; */
+    transform: translate(50%,-50%);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fafafa;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+
   /* margin-left: 30px;
   margin-top: 5px; */
 }
