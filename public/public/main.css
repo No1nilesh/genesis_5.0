@@ -6,7 +6,6 @@
 }
 
 .creater {
-  background-color: black;
   height: 10vh;
   display: grid;
   grid-template: 100%/3fr repeat(54, 1fr) 3fr;

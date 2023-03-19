@@ -13,7 +13,6 @@ html(lang="en")
       tr
         th Email
         th College
-        th Theme
         th(colspan='5') Fashion Show
         th Surprice Event
         th War of word
@@ -33,7 +32,6 @@ html(lang="en")
         tr
           td= item.email
           td= item.college
-          td= item.theme
           if item.fashion_show && item.fashion_show.length > 0 && item.fashion_show[0] !== 'Not selected'
             each subfield in item.fashion_show
               td= subfield

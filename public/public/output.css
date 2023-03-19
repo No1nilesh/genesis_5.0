@@ -549,6 +549,10 @@ video {
   bottom: 10px;
 }
 
+.bottom-\[-30px\] {
+  bottom: -30px;
+}
+
 .z-\[100\] {
   z-index: 100;
 }
@@ -603,12 +607,12 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -679,6 +683,11 @@ video {
   width: 83%;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-\[20rem\] {
   width: 20rem;
 }
@@ -705,27 +714,6 @@ video {
 
 .w-\[20px\] {
   width: 20px;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[65\%\] {
-  width: 65%;
-}
-
-.w-\[43\%\] {
-  width: 43%;
-}
-
-.w-\[46\%\] {
-  width: 46%;
 }
 
 .list-disc {
@@ -833,6 +821,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -841,8 +834,8 @@ video {
   padding: 20px;
 }
 
-.p-8 {
-  padding: 2rem;
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-\[10px\] {
@@ -861,18 +854,9 @@ video {
   padding: 0.5rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-20 {
@@ -917,16 +901,21 @@ video {
   font-size: 3.8rem;
 }
 
-.text-\[1\.4rem\] {
-  font-size: 1.4rem;
-}
-
 .text-\[3rem\] {
   font-size: 3rem;
 }
 
 .text-\[2\.8rem\] {
   font-size: 2.8rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-\[3vmin\] {
+  font-size: 3vmin;
 }
 
 .text-\[1\.3rem\] {
@@ -936,23 +925,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-\[5vmin\] {
-  font-size: 5vmin;
-}
-
-.text-\[4vmin\] {
-  font-size: 4vmin;
-}
-
-.text-\[3vmin\] {
-  font-size: 3vmin;
 }
 
 .font-bold {
@@ -1187,14 +1159,6 @@ video {
 
   .xl\:w-\[81rem\] {
     width: 81rem;
-  }
-
-  .xl\:w-\[46\%\] {
-    width: 46%;
-  }
-
-  .xl\:w-\[65\%\] {
-    width: 65%;
   }
 
   .xl\:w-\[35\%\] {
