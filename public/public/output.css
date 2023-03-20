@@ -635,6 +635,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
 .h-px {
   height: 1px;
 }
@@ -714,6 +718,12 @@ video {
 
 .w-\[20px\] {
   width: 20px;
+}
+
+.scale-\[0\.8\] {
+  --tw-scale-x: 0.8;
+  --tw-scale-y: 0.8;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .list-disc {

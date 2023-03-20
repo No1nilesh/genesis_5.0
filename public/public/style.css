@@ -144,8 +144,9 @@ section {
 }
 
 .logo img {
-  height: 21rem;
+ aspect-ratio: auto;
   width: 21rem;
+  height: 8rem;
   border-radius: 5%;
 }
 
