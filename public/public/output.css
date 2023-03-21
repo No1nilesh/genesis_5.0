@@ -635,6 +635,10 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -651,6 +655,10 @@ video {
   aspect-ratio: auto;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 .h-px {
   height: 1px;
 }
@@ -665,6 +673,10 @@ video {
 
 .h-24 {
   height: 6rem;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 .min-h-\[56vh\] {
