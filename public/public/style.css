@@ -145,7 +145,7 @@ section {
 
 .logo img {
  aspect-ratio: auto;
-  width: 21rem;
+  width: 100%;
   height: 8rem;
   border-radius: 5%;
 }
