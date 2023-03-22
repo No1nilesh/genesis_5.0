@@ -655,6 +655,10 @@ video {
   height: 10rem;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .min-h-\[56vh\] {
   min-height: 56vh;
 }
@@ -988,6 +992,14 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[5vmin\] {
+  font-size: 5vmin;
+}
+
+.text-\[3\.2rem\] {
+  font-size: 3.2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1063,6 +1075,10 @@ video {
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter-none {
+  filter: none;
 }
 
 .transition-all {
@@ -1226,6 +1242,16 @@ video {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

@@ -103,6 +103,10 @@ header {
   text-shadow: 1px 4px 6px #cd1e1e;
   text-align: center;
 }
+.p{
+  letter-spacing: 2px;
+  
+}
 
 .section2 {
   font-size: 1.5rem;
