@@ -140,7 +140,7 @@ section {
 
 .notvissible {
   transform: translateY(10%);
-  transition: all 1s;
+  transition: 1000ms cubic-bezier(0.1, 0.7, 0.6, 0.9);
 }
 
 .show {
@@ -162,6 +162,15 @@ section {
 }
 .logo:nth-child(4) {
   transition-delay: 600ms;
+}
+.logo:nth-child(5) {
+  transition-delay: 800ms;
+}
+.logo:nth-child(6) {
+  transition-delay: 1000ms;
+}
+.logo:nth-child(7) {
+  transition-delay: 1200ms;
 }
 
 
