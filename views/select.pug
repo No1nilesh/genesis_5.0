@@ -23,7 +23,7 @@ html(lang="en")
     label(for="student_co") Student Coordinator: 
     input.student_co(type="text",name="student_co", placeholder="Student Name",autocomplete="off", required)
     label(for="phone") Phone: 
-    input.phone(type="number",name="phone", placeholder="Phone Number",autocomplete="off", required  )
+    input.phone(type="number",name="phone", placeholder="Phone Number",autocomplete="off", required,pattern="[6789][0-9]{9}"  )
     
 
     label(for='college') College Name:
@@ -176,10 +176,7 @@ html(lang="en")
          input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 1",autocomplete="off", required)
       li 
          input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 2",autocomplete="off", required)
-      li 
-         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 3",autocomplete="off", required)
-      li 
-         input.cinematic_creation(type="text",name="cinematic_creation[]", placeholder="member 4",autocomplete="off", required)
+     
    
     
     //- .dropdown
@@ -213,7 +210,7 @@ html(lang="en")
     
     .dropdown
      input#toggle_nfs(type='checkbox')
-     label(for="nfs") 2. NFS: 
+     label(for="nfs") 2. NFS Most Wanted: 
      ol  
       li 
          input.nfs(type="text",name="nfs", placeholder="member 1",autocomplete="off")
@@ -221,7 +218,7 @@ html(lang="en")
     
     .dropdown
      input#toggle_fifa(type='checkbox')
-     label(for="fifa") 3. FIFA 2023: 
+     label(for="fifa") 3. FIFA 23: 
      ol  
       li 
          input.fifa(type="text",name="fifa", placeholder="member 1",autocomplete="off",)
