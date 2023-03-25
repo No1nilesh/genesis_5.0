@@ -19,7 +19,7 @@ router.post(
 
   catchAsyncErro(
     async (req, res, next) => {
-      const { email, college, theme, group_dance, fifa, nfs, cs_go, cinematic_creation, photography, blind_coding, code_hunt, meme_making, third_degree, war_of_word, surprice_event, tug_of_war, mr_ms, fashion_show } = req.body;
+      const { email, college, theme,student_co, phone, group_dance, fifa, nfs, cs_go, cinematic_creation, photography, blind_coding, code_hunt, meme_making, third_degree, war_of_word, surprice_event, tug_of_war, mr_ms, fashion_show } = req.body;
       try {
         // const themeDb = await Event.findOne({ theme: theme });
         const collegeDb = await Event.findOne({ college: college });
@@ -33,6 +33,8 @@ router.post(
         const themes = await Event.create({
           email: email,
           college: college,
+          student_co:student_co,
+          phone:phone,
           theme: theme,
           group_dance: group_dance,
           fifa: fifa,

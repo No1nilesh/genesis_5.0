@@ -12,6 +12,14 @@ const ThemeSchema = new Schema({
     type: String,
     required: true,
   },
+  student_co:{
+type:String,
+required:true
+  },
+  phone:{
+type:String,
+require:true
+  },
   theme: {
     type: String,
     default: "Not participating",

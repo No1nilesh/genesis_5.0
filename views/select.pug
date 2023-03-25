@@ -17,11 +17,17 @@ html(lang="en")
     .instructions ⚠️ *If Not participating in any particular event Please select through checkbox infront of event names!
     label(for='email') Email:
     input#email(type='email', name='email',placeholder='Enter Your Email',autocomplete="off", required)
-
+    
+    
+     
+    label(for="student_co") Student Coordinator: 
+    input.student_co(type="text",name="student_co", placeholder="student name",autocomplete="off", required)
+    label(for="phone") Phone: 
+    input.phone(type="number",name="phone", placeholder="Phone Number",autocomplete="off", required min="10" max="10")
     
 
     label(for='college') College Name:
-    - let options = ["Carmel College for Women, Salcete","Don Bosco College Margao",'Shree Damodar College of Commerce and Economics', 'Dhempe College of Arts & Science', 'Dempo College of Commerce & Economics',  "Dnyanprassarak Mandal's College Assagao" , "Don Bosco Collegein Panaji" , "Goa College Of Architecture", "P.E.S's R.S.N COLLEGE OF ARTS AND SCIENCE",  "GVM's GGPR College of Commerce & Economics", "Saraswat Vidyalaya's Sridora Caculo College of Commerce", "Rosary College of Commerce and Arts", "Goa Engineering College", "St. Xavier's College Mapusa", "Parvatibai Chowgule College Arts And Science", "Fr. Agnel College of Arts and Commerce Pillar", "Padre Conceicao College of Engineering", "V.M. Salgaocar College of Law" , "Government College of Arts, Science and Commerce, Khandola", "Nirmala Institute of Education", "Shree Rayeshwar Institute of Engineering & Information Technology"]
+    - let options = ["Carmel College for Women, Salcete","Don Bosco College Margao",'Shree Damodar College of Commerce and Economics', 'Dhempe College of Arts & Science', 'Dempo College of Commerce & Economics',  "Dnyanprassarak Mandal's College Assagao" , "Don Bosco Collegein Panaji" , "Goa College Of Architecture", "P.E.S's R.S.N COLLEGE OF ARTS AND SCIENCE",  "GVM's GGPR College of Commerce & Economics", "Saraswat Vidyalaya's Sridora Caculo College of Commerce", "Rosary College of Commerce and Arts", "Goa Engineering College", "St. Xavier's College Mapusa", "Parvatibai Chowgule College Arts And Science", "Fr. Agnel College of Arts and Commerce Pillar", "Padre Conceicao College of Engineering", "V.M. Salgaocar College of Law" , "Government College of Arts, Science and Commerce, Khandola", "Nirmala Institute of Education", "Shree Rayeshwar Institute of Engineering & Information Technology", "Goa Multi Faculty College in Piliem", "Government College Of Arts Science And Commerce Sanquelim"]
 
     select#college(name='college' required)
       <option value="" disabled selected>Select your College</option>
@@ -38,7 +44,8 @@ html(lang="en")
 
 
     
-    
+
+   
     
     .dropdown
      
