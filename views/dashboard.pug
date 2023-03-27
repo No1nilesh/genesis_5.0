@@ -21,7 +21,7 @@ html(lang="en")
         th Photography
         th(colspan='5') Tug of war
         th Third degree
-        th(colspan='4') Cinematic creation
+        th Cinematic creation
         th(colspan='2') Mr & Miss Genesis
         th(colspan='4') Code hunt
         th(colspan='2') Blind coding
@@ -50,11 +50,7 @@ html(lang="en")
           else
             td(colspan=5) Not Selected
           td=item.third_degree
-          if item.cinematic_creation && item.cinematic_creation.length > 0 && item.cinematic_creation[0] !== 'Not selected'
-            each subfield in item.cinematic_creation
-              td= subfield
-          else
-            td(colspan=4) Not Selected 
+          td= item.cinematic_creation 
           if item.mr_ms && item.mr_ms.length > 0 && item.mr_ms[0] !== 'Not selected'
             each subfield in item.mr_ms
               td= subfield
