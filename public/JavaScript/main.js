@@ -17,6 +17,7 @@ const observer = new IntersectionObserver((enteries) => {
 const hiddenElements = document.querySelectorAll(".notvissible");
 hiddenElements.forEach((el) => observer.observe(el));
 
+
 const cardGlow = document.querySelectorAll(".cardGlow");
 cardGlow.forEach((cd) => {
   observer.observe(cd);
