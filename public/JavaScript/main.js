@@ -27,3 +27,20 @@ const typewriter = document.querySelectorAll(".typo");
 typewriter.forEach((ty)=>{
   observer.observe(ty);
 })
+
+
+// Show loader
+function showLoader() {
+  document.querySelector('.loader').style.display = 'flex';
+}
+
+// Hide loader
+function hideLoader() {
+  document.querySelector('.loader').style.display = 'none';
+}
+
+// Show loader until page is fully loaded
+window.onload = function() {
+  hideLoader();
+};
+showLoader();
