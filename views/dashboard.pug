@@ -23,13 +23,13 @@ html(lang="en")
         th Third degree
         th Cinematic creation
         th(colspan='2') Mr & Miss Genesis
+        th(colspan='5') Group Dance
         th(colspan='4') Code hunt
         th(colspan='2') Blind coding
         th Meme Making
         th(colspan='5') Cs Go
         th Fifa
         th Nfs
-
       each item in event
         tr
           td= item.email
@@ -56,6 +56,9 @@ html(lang="en")
               td= subfield
           else
             td(colspan=2) Not Selected
+          if item.group_dance && item.group_dance.length > 0 && item.group_dance[0] !== 'Not selected'
+            each subfield in item.group_dance
+              td= subfield     
           if item.code_hunt && item.code_hunt.length > 0 && item.code_hunt[0] !== 'Not selected'
             each subfield in item.code_hunt
               td= subfield
@@ -74,4 +77,4 @@ html(lang="en")
             td(colspan=5) Not Selected
           td=item.fifa
           td=item.nfs
-                        
+                    
