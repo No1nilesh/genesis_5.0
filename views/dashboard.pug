@@ -36,7 +36,7 @@ html(lang="en")
           td= item.college
           td= item.student_co 
           td= item.phone
-          if item.fashion_show && item.fashion_show.length > 0 && item.fashion_show[0] !== 'Not selected'
+          if item.fashion_show && item.fashion_show.length > 0 && item.fashion_show[0] !== 'Not participating'
             each subfield in item.fashion_show
               td= subfield
           else
@@ -44,33 +44,33 @@ html(lang="en")
           td=item.surprice_event
           td=item.war_of_word
           td=item.photography
-          if item.tug_of_war && item.tug_of_war.length > 0 && item.tug_of_war[0] !== 'Not selected'
+          if item.tug_of_war && item.tug_of_war.length > 0 && item.tug_of_war[0] !== 'Not participating'
             each subfield in item.tug_of_war
               td= subfield
           else
             td(colspan=5) Not Selected
           td=item.third_degree
           td= item.cinematic_creation 
-          if item.mr_ms && item.mr_ms.length > 0 && item.mr_ms[0] !== 'Not selected'
+          if item.mr_ms && item.mr_ms.length > 0 && item.mr_ms[0] !== 'Not participating'
             each subfield in item.mr_ms
               td= subfield
           else
             td(colspan=2) Not Selected
-          if item.group_dance && item.group_dance.length > 0 && item.group_dance[0] !== 'Not selected'
+          if item.group_dance && item.group_dance.length > 0 && item.group_dance[0] !== 'Not participating'
             each subfield in item.group_dance
               td= subfield     
-          if item.code_hunt && item.code_hunt.length > 0 && item.code_hunt[0] !== 'Not selected'
+          if item.code_hunt && item.code_hunt.length > 0 && item.code_hunt[0] !== 'Not participating'
             each subfield in item.code_hunt
               td= subfield
           else
             td(colspan=4) Not Selected
-          if item.blind_coding && item.blind_coding.length > 0 && item.blind_coding[0] !== 'Not selected'
+          if item.blind_coding && item.blind_coding.length > 0 && item.blind_coding[0] !== 'Not participating'
             each subfield in item.blind_coding
               td= subfield
           else
             td(colspan=2) Not Selected
           td= item.meme_making 
-          if item.cs_go && item.cs_go.length > 0 && item.cs_go[0] !== 'Not selected'
+          if item.cs_go && item.cs_go.length > 0 && item.cs_go[0] !== 'Not participating'
             each subfield in item.cs_go
               td= subfield
           else
